@@ -21,7 +21,7 @@
         </div>
           <div class="message" id="winningMessage">
                 <p id="messageText"></p>
-                <button onclick="reset()">Restart</button>
+                <button class="btn" onclick="reset()">Start Play</button>
             </div>
     </div>
     
@@ -155,6 +155,7 @@ function handleclick(i)
     if (result) {
         document.getElementById('winningMessage').style.display = 'flex';
         messageText.textContent = playerTurn ? 'X wins!' : 'O wins!';
+        document.querySelector('.btn').textContent="Play Again";
     }
     playerTurn=!playerTurn;  
 }
